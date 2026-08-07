@@ -3012,6 +3012,31 @@ Possible enum values:
   - `custom`
   - `express`
   - `none`
+  - ```curl
+curl -X POST https://api.stripe.com/v2/core/accounts/{{CONNECTEDACCOUNT_ID}} \
+  -H "Authorization: Bearer <<YOUR_SECRET_KEY>>" \
+  -H "Stripe-Version: 2025-11-17.preview" \
+  --json '{
+    "identity": {
+        "attestations": {
+            "terms_of_service": {
+                "account": {
+                    "date": "2020-01-04T12:01:45Z",
+                    "ip": "8.8.8.8"
+                }
+            }
+        }
+    }
+  }'
+```
+
+#### Accounts v1
+
+```curl
+curl https://api.stripe.com/v1/accounts/{{CONNECTEDACCOUNT_ID}} \
+  -u "<<YOUR_SECRET_KEY>>:" \
+  -d "tos_acceptance[date]=1609798905" \
+  -d "tos_acceptance[ip]=8.8.8.8"
     Indicates that the account was created with [controller](https://docs.stripe.com/docs/api/accounts/object.md#account_object-controller) attributes that don’t map to a type of `standard`, `express`, or `custom`.
 
   - `standard`
