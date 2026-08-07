@@ -35,10 +35,10 @@
     },
     "type": "application"
   },
-  "country": "US",
+  "country": "CA",
   "created": 1695830751,
   "default_currency": "usd",
-  "details_submitted": false,
+  "details_submitted": true,
   "email": "energyenterprizesvdn@gmail.com",
   "external_accounts": {
     "object": "list",
@@ -65,7 +65,7 @@
     "data": []
   },
   "metadata": {},
-  "payouts_enabled": false,
+  "payouts_enabled": true,
   "requirements": {
     "alternatives": [],
     "current_deadline": null,
@@ -86,8 +86,8 @@
       "business_profile.url",
       "business_type",
       "external_account",
-      "representative.first_name",
-      "representative.last_name",
+      "representative.first_name", Jessie
+      "representative.last_name", Wagg
       "tos_acceptance.date",
       "tos_acceptance.ip"
     ],
